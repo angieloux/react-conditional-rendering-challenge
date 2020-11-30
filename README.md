@@ -1,73 +1,70 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using the basic template.
+# Hi, Friend. Bye, Friend.
 
-## What's in the basic template?
-- It includes node-sass, and a style.scss (and removes all .css files)
-- It doesn't use serviceWorker
-- It replaces the react favicon with a flower of life icon
+## Setup
 
-## Available Scripts
+1. Make a fork of this repo
+2. Clone your fork to your local development environment
+3. Change to the project directory
+4. Install dependencies: `yarn install`
+5. Run the application: `yarn start`
+6. Verify the application runs as expected
 
-In the project directory, you can run:
+### What you should see
+![Greeter Application - challenge start](greeter-challenge-start.png)
 
-### `yarn start`
+You'll notice that the buttons and text field don't seem to "do" anything. You can type into the text field and press the buttons, but they don't change what you see on the screen.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Challenge
+This challenge will help you practice your understanding of conditional rendering of components in React.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This is a very simple and polite application. If you say Hi, it says Hi back. When you say Bye, it says tells you Bye. And if you tell it your name, it will greet you personally! 
 
-### `yarn test`
+It should behave like this: 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nSCMZ2v4OZ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The steps to complete this challenge are below. This challenge is also full of bonus learning opportunities mentioned in the code comments.
 
-### `yarn build`
+**Before you begin: Investigate console log**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Look at the application console log output in the terminal where you ran `yarn start`.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Notice that there are warnings in App.js, Hello.js, and Goodbye.js for unused variables. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you open the console in the browser where the app is running, you should see the same warnings. 
 
-### `yarn eject`
+It is important when you are investigating an implementation, to figure out how it works or solve issues, that you look both in the terminal console and in the browser console to help you understand what is happening.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The warnings you see point to what needs to be changed in the code scaffold to complete the challenge. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Part 1: Implement conditional rendering of name in Hello**
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+In Hello.js, you will refactor the code in the return statement to either render "Hi, friend", or to render "Hi, `name`", where `name` will be passed in with props when something is typed into the text field on the screen. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The code that passes the information from the text field to the Hello component is already written for you. You can examine it to try to understand how it works. 
 
-## Learn More
+But all you have to do is to alter the return statement in Hello.js to check for name, and to render the name if it is not null.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Part 2: Implement conditional rendering of name in Goodbye**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You will do the same thing in Goodbye.js that you did in Hello.js. Practice makes perfect!
 
-### Code Splitting
+**Part 3: Conditionally render the Hello or Goodbye component.**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+In App.js, currently both the Hello and Goodbye components are being rendered. 
 
-### Analyzing the Bundle Size
+Your challenge is to render only the Hello component when `isArriving` is set to `true`. App should only render the Goodbye component when `isArriving` is `false`.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+You should refactor code in the return statement in App.js to accomplish this.
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Tests and Submitting
 
-### Advanced Configuration
+At any time you can run `yarn test` to see your progress. By default it will run in `watch` mode, and you will have to press `q` to quit. It will run the automated tests against your code and let you know what your progress is so far. Once you have all the tests passing, you can submit your challenge. To do this make sure you have committed your work:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. From the project root `git add .` and add all the files changed in this folder
+2. Commit these files to your repository `git commit -m "challenge completed"`
+3. Make sure your working tree is clear `git status`
+4. Push these files to your github repository `git push origin master`
+5. Log on to Github and visit your fork of this challenge.
+6. Make a pull request to the main branch.
+7. Wait and watch the final tests run, if you are successful it will automatically let your educators know you are finished.
