@@ -20,7 +20,7 @@ This challenge will help you practice your understanding of conditional renderin
 This is a very simple and polite application. If you say Hi, it says Hi back. When you say Bye, it says tells you Bye. And if you tell it your name, it will greet you personally! 
 
 It should behave like this: 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nSCMZ2v4OZ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Completed challenge example](https://youtu.be/nSCMZ2v4OZ4)
 
 The steps to complete this challenge are below. This challenge is also full of bonus learning opportunities mentioned in the code comments.
 
