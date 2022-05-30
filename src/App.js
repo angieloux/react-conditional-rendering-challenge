@@ -38,8 +38,11 @@ const App = () => {
 		<div>
 			<CenteredRow >
 				<Card>
-					<Hello name={name}/> 
-					<Goodbye name={name} />
+					{isArriving ? (
+						<Hello name={name}/> 
+					) : (
+						<Goodbye name={name} />
+					)}
 				</Card>
 			</CenteredRow>
 			<NameField setName={setName}/>
